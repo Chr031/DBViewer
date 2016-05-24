@@ -1,0 +1,5 @@
+*/sf.eclipse.javacc.prefs
+/lib/*
+!/lib/**/*.jar
+/bin/
+/build/

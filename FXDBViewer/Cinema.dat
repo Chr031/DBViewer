@@ -1,0 +1,97 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.cinema.Film</java-class>
+    <list>
+      <application.model.pojo.cinema.Film>
+        <title>The Maltese Falcon</title>
+        <summary>...</summary>
+        <realisationDate>1943-12-31 23:00:00.0 UTC</realisationDate>
+        <actors>
+          <application.model.pojo.cinema.Person>
+            <firstName>Humphrey</firstName>
+            <lastName>Bogart</lastName>
+          </application.model.pojo.cinema.Person>
+        </actors>
+        <realisators>
+          <application.model.pojo.cinema.Person>
+            <firstName>John</firstName>
+            <lastName>Huston</lastName>
+          </application.model.pojo.cinema.Person>
+        </realisators>
+      </application.model.pojo.cinema.Film>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.cinema.Person</java-class>
+    <list>
+      <application.model.pojo.cinema.Person reference="../../../entry/list/application.model.pojo.cinema.Film/actors/application.model.pojo.cinema.Person"/>
+      <application.model.pojo.cinema.Person reference="../../../entry/list/application.model.pojo.cinema.Film/realisators/application.model.pojo.cinema.Person"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>Cinema</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.cinema.Film</clazz>
+            <x>56.0</x>
+            <y>215.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.cinema.Session</clazz>
+            <x>48.0</x>
+            <y>145.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.cinema.Cinema</clazz>
+            <x>48.0</x>
+            <y>6.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.cinema.Person</clazz>
+            <x>50.0</x>
+            <y>289.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.cinema.Room</clazz>
+            <x>51.0</x>
+            <y>80.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.cinema.Session</java-class>
+    <list>
+      <application.model.pojo.cinema.Session>
+        <date>2015-06-15 22:00:00.0 UTC</date>
+        <film reference="../../../../entry/list/application.model.pojo.cinema.Film"/>
+      </application.model.pojo.cinema.Session>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.cinema.Cinema</java-class>
+    <list>
+      <application.model.pojo.cinema.Cinema>
+        <name>Corso</name>
+        <address>Zurich</address>
+      </application.model.pojo.cinema.Cinema>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.cinema.Room</java-class>
+    <list>
+      <application.model.pojo.cinema.Room>
+        <cinema reference="../../../../entry[5]/list/application.model.pojo.cinema.Cinema"/>
+        <roomNumber>1</roomNumber>
+        <numberOfSeats>500</numberOfSeats>
+        <sessions>
+          <application.model.pojo.cinema.Session reference="../../../../../entry[4]/list/application.model.pojo.cinema.Session"/>
+        </sessions>
+      </application.model.pojo.cinema.Room>
+    </list>
+  </entry>
+</map>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoadModelController">
+	<center>
+
+		<GridPane hgap="5.0" vgap="5.0" GridPane.rowIndex="1">
+			<columnConstraints>
+				<ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="77" minWidth="77.0" />
+				<ColumnConstraints hgrow="ALWAYS" prefWidth="408.0" />
+				<ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints prefHeight="23.0" vgrow="NEVER" />
+				<RowConstraints prefHeight="23.0" vgrow="NEVER" />
+				<RowConstraints maxHeight="250.0" minHeight="100.0" prefHeight="128.0" vgrow="ALWAYS" />
+				<RowConstraints />
+			</rowConstraints>
+			<children>
+				<Label text="Model name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+				<TextField fx:id="modelNameTextField" promptText="Enter the model name" GridPane.columnIndex="1" GridPane.columnSpan="2"
+					GridPane.rowIndex="0" />
+
+				<Label text="Jar file" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+				<TextField fx:id="fileTextField" promptText="path of the jar file" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<Button mnemonicParsing="false" onAction="#BrowseFile" text="Browse" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+				<Label text="Packages and classes" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+				<TextArea fx:id="packageTextArea" onKeyPressed="#ctrlSpace" promptText="list of packages separated by a semicolumn" wrapText="true"
+					GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+				
+				<HBox alignment="CENTER_RIGHT" prefHeight="25" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="3"
+					GridPane.rowIndex="3">
+					<children>
+						<Button mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+						<Button mnemonicParsing="false" onAction="#loadModel" text="Load model" />
+					</children>
+				</HBox>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+			</BorderPane.margin>
+		</GridPane>
+
+
+	</center>
+</BorderPane>

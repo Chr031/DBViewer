@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml/1">
+
+	<center>
+		<ScrollPane prefHeight="200.0" prefWidth="250.0"
+			BorderPane.alignment="CENTER">
+			<content>
+				<VBox fx:id="vbox" prefWidth="230.0"/>
+			</content>
+		</ScrollPane>
+	</center>
+
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="30.0" spacing="5.0">
+			<children>
+				<Button  mnemonicParsing="false" onAction="#save" text="Save" />
+				<Button mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+			</children>
+		</HBox>
+	</bottom>
+</fx:root>
+

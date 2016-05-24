@@ -1,0 +1,89 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.timesheet.Person</java-class>
+    <list>
+      <application.model.pojo.timesheet.Person>
+        <firstName>Christophe</firstName>
+        <lastName>Anastassiades</lastName>
+        <reports>
+          <application.model.pojo.timesheet.DayReport>
+            <day>2015-08-06 22:00:00.0 UTC</day>
+            <bookings>
+              <application.model.pojo.timesheet.TimeBooking>
+                <category>
+                  <name>adcubum</name>
+                  <description>Time passed in adcubum</description>
+                </category>
+                <startTime>8:30</startTime>
+                <endTime>18:00</endTime>
+                <breakTime>1:0</breakTime>
+              </application.model.pojo.timesheet.TimeBooking>
+            </bookings>
+          </application.model.pojo.timesheet.DayReport>
+        </reports>
+      </application.model.pojo.timesheet.Person>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>TimeSheet</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.timesheet.Person</clazz>
+            <x>80.0</x>
+            <y>161.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.timesheet.MonthReport</clazz>
+            <x>11.0</x>
+            <y>311.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.timesheet.TimeBooking</clazz>
+            <x>162.0</x>
+            <y>12.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.timesheet.DayReport</clazz>
+            <x>143.0</x>
+            <y>70.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.timesheet.Category</clazz>
+            <x>0.0</x>
+            <y>0.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.timesheet.Category</java-class>
+    <list>
+      <application.model.pojo.timesheet.Category reference="../../../entry/list/application.model.pojo.timesheet.Person/reports/application.model.pojo.timesheet.DayReport/bookings/application.model.pojo.timesheet.TimeBooking/category"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.timesheet.MonthReport</java-class>
+    <list>
+      <application.model.pojo.timesheet.MonthReport>
+        <month>2015-08-07 22:00:00.0 UTC</month>
+        <person reference="../../../../entry/list/application.model.pojo.timesheet.Person"/>
+      </application.model.pojo.timesheet.MonthReport>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.timesheet.TimeBooking</java-class>
+    <list>
+      <application.model.pojo.timesheet.TimeBooking reference="../../../entry/list/application.model.pojo.timesheet.Person/reports/application.model.pojo.timesheet.DayReport/bookings/application.model.pojo.timesheet.TimeBooking"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.timesheet.DayReport</java-class>
+    <list>
+      <application.model.pojo.timesheet.DayReport reference="../../../entry/list/application.model.pojo.timesheet.Person/reports/application.model.pojo.timesheet.DayReport"/>
+    </list>
+  </entry>
+</map>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="276.0" prefWidth="200.0" type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Filter :" />
+            <TextField  fx:id="filter"/>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <ListView fx:id="listView" prefHeight="216.0" prefWidth="219.0" BorderPane.alignment="CENTER"
+      onMouseClicked="#handleClickSelect" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="196.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Select" onAction="#handleSelect" />
+            <Button mnemonicParsing="false" text="Cancel" onAction="#handleCancel"/>
+         </children>
+      </HBox>
+   </bottom>
+</fx:root>

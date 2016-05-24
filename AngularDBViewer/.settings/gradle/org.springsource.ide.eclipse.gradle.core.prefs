@@ -1,0 +1,5 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Wed May 27 13:55:05 CEST 2015
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;../FXDBViewer;
+org.springsource.ide.eclipse.gradle.linkedresources=
+org.springsource.ide.eclipse.gradle.rootprojectloc=

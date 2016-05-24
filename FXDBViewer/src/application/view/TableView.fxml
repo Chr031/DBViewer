@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label text="Filter : " />
+				<TextField fx:id="filter" />
+			</children>
+		</HBox>
+	</top>
+	<center>
+		<TableView fx:id="table" />
+	</center>
+	<bottom>
+		<BorderPane prefHeight="30.0" prefWidth="30.0"
+			BorderPane.alignment="CENTER">
+			<center>
+				<HBox alignment="CENTER" prefWidth="30.0" spacing="5" BorderPane.alignment="CENTER">
+					<children>
+						<Button mnemonicParsing="false" onAction="#handleNewData" text="+" />
+						<Button mnemonicParsing="false" onAction="#handleDeleteRow"	prefHeight="25.0" prefWidth="26.0" text="-" />
+					</children>
+				</HBox>
+			</center>
+			<left>
+				<Button mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" BorderPane.alignment="CENTER" />
+			</left>
+		</BorderPane>
+	</bottom>
+</BorderPane>

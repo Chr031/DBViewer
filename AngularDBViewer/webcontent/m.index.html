@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DB Viewer mobile</title>
+
+	<link rel="stylesheet" href="bootstrap.min.css">
+
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="angular-route.js"></script>
+	<script type="text/javascript" src="ui-bootstrap-tpls-0.12.1.js"></script>
+    <script type="text/javascript" src="rbush.js"></script>
+
+
+	<script type="text/javascript" src="cubeApp.js"></script>
+	<script type="text/javascript" src="cubeAppUML.js"></script>
+	<link rel="stylesheet" href="m.cubeApp.css">
+
+
+</head>
+<body ng-app="cubeApp" ng-controller="baseController">
+	
+
+
+	<div class="header-wrap"  >
+		<h1> DB Viewer </h1>
+
+		<div ng-controller="modelListController" style="margin-left:10;">
+			<ul class="nav nav-tabs">{{activeModel.modelName}}
+				<li ng-repeat="model in models" >
+					<a href="#" ng-click="chooseModel(model)" >{{model.modelName}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<div ng-controller="historyController"  />
+		
+		<div class="menu-wrap" watsch-size=".historyLine:left:180,.actionBar:left:30,.container:margin-left:20">
+			<div ng-controller="tableListController" ng-show="activeModel().modelName != undefined" class="tableBar" >
+				
+				<ul class="nav nav-tabs">
+					<li ><a href="#" ng-click="openUMLMap(activeModel())" ><b> Global Map and links </b></a></li>
+					<li ng-repeat="objectClass in activeModel().classes" >
+						<a href="#" ng-click="chooseClass(objectClass)" >{{objectClass.simpleName}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+
+		<div class="container col-sm-10">
+
+			<div class="historyLine" left-bind="{{menuwrapsize}}">
+				<span  >
+					<!--span class="historyBlock" >{{historyData.title}} </span>
+					<canvas style="vertical-align:text-bottom" height="16" width="20" drawing="{{$last}}" color="#ccc">  </canvas-->		
+					<canvas	ng-repeat="(historyIndex, historyData) in historyView" 
+					ng-click="gotoHistory(historyIndex)" style="cursor:pointer"
+					drawing="{{$last}}" color="#9AB" font-size="15" font-color="white" font-familly="Arial" text="{{historyData.title}}"/>	
+				</span>
+			</div>
+
+
+			<div ng-controller="displayController">
+				<div class="slide-animate-container">
+					<div ng-repeat="(historyIndex, historyData) in historyView" class="slide-animate" ng-include="historyData.viewTemplate"
+						ng-show="historyIndex == activeHistoryViewIndex"
+					>					
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	
+	<div class="errorPane" ng-show="error.show"> 
+		<div><h3>{{error.title}}</h3></div>
+		<hr color="blue"/>
+		<div ><h5><i>{{error.content}}</i></h5></div>
+		<div>
+			<button class="btn btn-danger" ng-click="error.show=false;">Close</button>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+</body>
+</html>

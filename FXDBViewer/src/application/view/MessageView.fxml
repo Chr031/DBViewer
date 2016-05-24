@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.control.TextArea?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.view.MessageViewController">
+	<center>
+		<TextArea fx:id="textArea" onKeyReleased="#handleTextChanged" />
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="30.0" spacing="5.0"
+			GridPane.rowIndex="1">
+			<children>
+				<Button defaultButton="true" mnemonicParsing="false" text="Save" />
+				<Button mnemonicParsing="false" text="Send" />
+				<Button mnemonicParsing="false" text="Cancel">
+					<HBox.margin>
+						<Insets left="20.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</bottom>
+	<left>
+		<!-- -->
+	</left>
+
+
+</BorderPane>

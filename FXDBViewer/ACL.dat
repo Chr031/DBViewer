@@ -1,0 +1,178 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.acl.GroupRole</java-class>
+    <list>
+      <application.model.pojo.acl.GroupRole>
+        <group>
+          <name>Admin Group</name>
+          <description>Gives, provides and lists all necessary rights to have the full control of a given resource</description>
+        </group>
+        <role>
+          <name>Admin Role</name>
+          <description>Full access </description>
+        </role>
+        <resource>
+          <name>Desktop 1</name>
+          <type>
+            <name>Desktops</name>
+            <description>All desktop computers</description>
+          </type>
+        </resource>
+      </application.model.pojo.acl.GroupRole>
+      <application.model.pojo.acl.GroupRole>
+        <group>
+          <name>Standard RW</name>
+          <description>Provides a classical access to the resource</description>
+        </group>
+        <role>
+          <name>Access</name>
+          <description>Access to the resource with a normal and functional way</description>
+        </role>
+        <resource>
+          <name>Printer 2</name>
+          <type>
+            <name>Printers</name>
+            <description>All printers</description>
+          </type>
+        </resource>
+      </application.model.pojo.acl.GroupRole>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.User</java-class>
+    <list>
+      <application.model.pojo.acl.User>
+        <username>Can</username>
+        <password>can</password>
+        <groups>
+          <application.model.pojo.acl.Group reference="../../../../../entry/list/application.model.pojo.acl.GroupRole/group"/>
+        </groups>
+      </application.model.pojo.acl.User>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.Group</java-class>
+    <list>
+      <application.model.pojo.acl.Group reference="../../../entry/list/application.model.pojo.acl.GroupRole/group"/>
+      <application.model.pojo.acl.Group reference="../../../entry/list/application.model.pojo.acl.GroupRole[2]/group"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.Profile</java-class>
+    <list>
+      <application.model.pojo.acl.Profile>
+        <firstName>Christophe</firstName>
+        <lastName>Anastassiades</lastName>
+        <email>can@bytepocket.ch</email>
+        <user reference="../../../../entry[2]/list/application.model.pojo.acl.User"/>
+      </application.model.pojo.acl.Profile>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>ACL</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.GroupRole</clazz>
+            <x>5.0</x>
+            <y>133.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.User</clazz>
+            <x>225.0</x>
+            <y>58.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.Group</clazz>
+            <x>16.0</x>
+            <y>57.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.Profile</clazz>
+            <x>218.0</x>
+            <y>0.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.Resource</clazz>
+            <x>119.0</x>
+            <y>221.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.UserRole</clazz>
+            <x>213.0</x>
+            <y>136.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.ResourceType</clazz>
+            <x>105.0</x>
+            <y>317.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.acl.Role</clazz>
+            <x>127.0</x>
+            <y>135.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+  <entry>
+    <java-class>java.util.Collections$EmptyList</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.Resource</java-class>
+    <list>
+      <application.model.pojo.acl.Resource reference="../../../entry/list/application.model.pojo.acl.GroupRole/resource"/>
+      <application.model.pojo.acl.Resource>
+        <name>Printer 1</name>
+        <type reference="../../../../entry/list/application.model.pojo.acl.GroupRole[2]/resource/type"/>
+      </application.model.pojo.acl.Resource>
+      <application.model.pojo.acl.Resource reference="../../../entry/list/application.model.pojo.acl.GroupRole[2]/resource"/>
+      <application.model.pojo.acl.Resource>
+        <name>Laptop 1</name>
+        <type>
+          <name>Laptop</name>
+          <description>All laptop computers</description>
+        </type>
+      </application.model.pojo.acl.Resource>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.UserRole</java-class>
+    <list>
+      <application.model.pojo.acl.UserRole>
+        <user reference="../../../../entry[2]/list/application.model.pojo.acl.User"/>
+        <role reference="../../../../entry/list/application.model.pojo.acl.GroupRole/role"/>
+        <resource reference="../../../../entry/list/application.model.pojo.acl.GroupRole/resource"/>
+      </application.model.pojo.acl.UserRole>
+      <application.model.pojo.acl.UserRole>
+        <user reference="../../../../entry[2]/list/application.model.pojo.acl.User"/>
+        <role reference="../../../../entry/list/application.model.pojo.acl.GroupRole[2]/role"/>
+        <resource reference="../../../../entry[7]/list/application.model.pojo.acl.Resource[2]"/>
+      </application.model.pojo.acl.UserRole>
+      <application.model.pojo.acl.UserRole>
+        <user reference="../../../../entry[2]/list/application.model.pojo.acl.User"/>
+        <role reference="../../../../entry/list/application.model.pojo.acl.GroupRole[2]/role"/>
+        <resource reference="../../../../entry/list/application.model.pojo.acl.GroupRole[2]/resource"/>
+      </application.model.pojo.acl.UserRole>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.ResourceType</java-class>
+    <list>
+      <application.model.pojo.acl.ResourceType reference="../../../entry/list/application.model.pojo.acl.GroupRole/resource/type"/>
+      <application.model.pojo.acl.ResourceType reference="../../../entry[7]/list/application.model.pojo.acl.Resource[4]/type"/>
+      <application.model.pojo.acl.ResourceType reference="../../../entry/list/application.model.pojo.acl.GroupRole[2]/resource/type"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.acl.Role</java-class>
+    <list>
+      <application.model.pojo.acl.Role reference="../../../entry/list/application.model.pojo.acl.GroupRole/role"/>
+      <application.model.pojo.acl.Role reference="../../../entry/list/application.model.pojo.acl.GroupRole[2]/role"/>
+    </list>
+  </entry>
+</map>

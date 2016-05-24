@@ -1,0 +1,130 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.ecom.Customer</java-class>
+    <list>
+      <application.model.pojo.ecom.Customer>
+        <id>1</id>
+        <name>Anastassiades</name>
+        <address>Christophe</address>
+        <email>can@bytepocket.ch</email>
+        <addresses>
+          <application.model.pojo.ecom.Address>
+            <Street>Im Riet 10</Street>
+            <City>Stafa</City>
+            <Country>Switzerland</Country>
+          </application.model.pojo.ecom.Address>
+          <application.model.pojo.ecom.Address>
+            <Street>Seefeldstrasse 69</Street>
+            <City>Zurich</City>
+            <Country>Switzerland</Country>
+          </application.model.pojo.ecom.Address>
+        </addresses>
+      </application.model.pojo.ecom.Customer>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.ecom.Address</java-class>
+    <list>
+      <application.model.pojo.ecom.Address reference="../../../entry/list/application.model.pojo.ecom.Customer/addresses/application.model.pojo.ecom.Address"/>
+      <application.model.pojo.ecom.Address reference="../../../entry/list/application.model.pojo.ecom.Customer/addresses/application.model.pojo.ecom.Address[2]"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.ecom.Item</java-class>
+    <list>
+      <application.model.pojo.ecom.Item>
+        <id>1</id>
+        <name>Iphone 5</name>
+        <description>Iphone 5</description>
+        <price>500.0</price>
+      </application.model.pojo.ecom.Item>
+      <application.model.pojo.ecom.Item>
+        <id>2</id>
+        <name>PC</name>
+        <description>PC with 80THz processor and 8PB of ram</description>
+        <price>1000.0</price>
+      </application.model.pojo.ecom.Item>
+      <application.model.pojo.ecom.Item>
+        <id>3</id>
+        <name>MacMini</name>
+        <description>Classical, nice and small computer for desk usage.</description>
+        <price>800.0</price>
+      </application.model.pojo.ecom.Item>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.ecom.Order</java-class>
+    <list>
+      <application.model.pojo.ecom.Order>
+        <id>1</id>
+        <customer reference="../../../../entry/list/application.model.pojo.ecom.Customer"/>
+        <items>
+          <application.model.pojo.ecom.OrderLine>
+            <id>1</id>
+            <item reference="../../../../../../entry[3]/list/application.model.pojo.ecom.Item[2]"/>
+            <quantity>1</quantity>
+          </application.model.pojo.ecom.OrderLine>
+        </items>
+      </application.model.pojo.ecom.Order>
+      <application.model.pojo.ecom.Order>
+        <id>1</id>
+        <customer reference="../../../../entry/list/application.model.pojo.ecom.Customer"/>
+        <items>
+          <application.model.pojo.ecom.OrderLine>
+            <id>3</id>
+            <item reference="../../../../../../entry[3]/list/application.model.pojo.ecom.Item[3]"/>
+            <quantity>1</quantity>
+          </application.model.pojo.ecom.OrderLine>
+          <application.model.pojo.ecom.OrderLine>
+            <id>2</id>
+            <item reference="../../../../../../entry[3]/list/application.model.pojo.ecom.Item"/>
+            <quantity>2</quantity>
+          </application.model.pojo.ecom.OrderLine>
+        </items>
+      </application.model.pojo.ecom.Order>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.ecom.OrderLine</java-class>
+    <list>
+      <application.model.pojo.ecom.OrderLine reference="../../../entry[4]/list/application.model.pojo.ecom.Order/items/application.model.pojo.ecom.OrderLine"/>
+      <application.model.pojo.ecom.OrderLine reference="../../../entry[4]/list/application.model.pojo.ecom.Order[2]/items/application.model.pojo.ecom.OrderLine[2]"/>
+      <application.model.pojo.ecom.OrderLine reference="../../../entry[4]/list/application.model.pojo.ecom.Order[2]/items/application.model.pojo.ecom.OrderLine"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>Ecom</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.ecom.Customer</clazz>
+            <x>7.0</x>
+            <y>21.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.ecom.Address</clazz>
+            <x>129.0</x>
+            <y>21.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.ecom.Item</clazz>
+            <x>22.0</x>
+            <y>238.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.ecom.Order</clazz>
+            <x>18.0</x>
+            <y>94.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.ecom.OrderLine</clazz>
+            <x>7.0</x>
+            <y>163.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+</map>

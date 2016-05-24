@@ -1,0 +1,2 @@
+include ':FXDBViewer'
+project(':FXDBViewer').projectDir = new File(settingsDir, '../FXDBViewer')

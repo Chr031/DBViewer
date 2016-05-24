@@ -1,0 +1,20 @@
+
+
+<div class="actionBar"> 
+	<button class="btn btn-default" ng-click="historyData.saveCallback(historyData.formData);">Save</button> 
+	<button class="btn btn-default" ng-click="cancelObject();">Cancel</button> 
+</div>
+
+
+<div class="table-responsive">          
+  	<table class="table" ng-show="activeClass().simpleName != undefined">
+		<tr ng-repeat="(indexProperty, property) in historyData.formData.classDescriptor.commonPropertyDescriptors">
+			<td> <label class="control-label">{{property.name}}</label></td>
+			<td ng-include="
+				propertyTemplateMapping[historyData.formData.objectBean.propertyBeans[property.name].templateType] + 
+				processTemplateOptionArguments(historyData.formData.objectBean.propertyBeans[property.name].templateOptions) +
+				'&propertyName=historyData.formData.objectBean.propertyBeans.'+property.name+'.value'"/> 
+		</tr>
+  	</table>
+</div>
+

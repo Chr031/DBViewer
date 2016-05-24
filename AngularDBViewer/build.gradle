@@ -1,0 +1,73 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+    }
+}
+
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {           
+            srcDir 'webcontent'
+        }
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   	
+   	compile project(':FXDBViewer')
+    compile 'org.springframework:spring-context:4.1.6.RELEASE'
+    compile "org.springframework.boot:spring-boot-starter-web"
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testCompile "junit:junit"
+    runtime 'com.thoughtworks.xstream:xstream:1.4.8'
+}
+
+ 
+
+mainClassName='application.restserver.RestServer'
+
+
+jar  {
+	baseName = 'WebApp'
+    version =  '0.1.0'
+}
+
+war {
+    baseName = 'WebApp'
+    version =  '0.1.0'
+    from 'webcontent'   
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+
+task export (dependsOn :build,type:Copy) {
+	println buildDir.name + '/libs/' + war.baseName +'-'+ war.version + '.war'
+	from buildDir.name + '/libs/' + war.baseName +'-'+ war.version + '.war'
+ 	//into'D:/prg/apache-tomcat-8.0.21/webcontent'
+	//into 'C:/prg/apache-tomcat-8.0.21/webcontent'
+	into '/Users/christophe/app/tomcat/apache-tomcat-8.0.24/webcontent'
+}
+
+

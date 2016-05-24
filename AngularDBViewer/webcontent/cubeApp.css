@@ -1,0 +1,130 @@
+	canvas {
+		padding:0;
+		margin:0;
+	}
+
+	.header-wrap {
+	    position: fixed;
+	    height: 120px;
+	    top: 0;
+	    width: 100%;
+	    z-index: 100;
+	    background-color:white;
+	}
+
+	.menu-wrap {
+	    position: fixed;
+	    top: 130px;
+	    left: 0px;
+	    z-index: 100;
+	    background-color:#89A;
+	    overflow-y:auto;
+	    overflow-x:hidden; 
+	    height: calc(100% - 130px);
+	}
+
+	.historyLine {
+		
+		position: fixed;
+	    top: 135px;
+	    left: 300px;
+	    z-index: 100;
+	    background-color:white;	
+	}
+
+	.actionBar {
+		position: fixed;
+	    top: 130px;
+	    left: 150px;
+	    z-index: 100;
+	    background-color:white;
+
+		
+	}
+
+	.header-background {
+		position: fixed;
+	    height: 190px;
+	    top: 0;
+	    width: 100%;
+	    z-index: 99;
+	    background-color:white;
+	}
+
+	.container{ 
+	    margin-top: 190px;
+	    margin-left: 110px ;
+	}
+
+	.popupPane {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width:50%;
+		z-index: 200;
+		box-shadow: 0 0 10px #CC5577;
+		border:2px solid #CC5577;
+		background-color: white;
+		padding:5px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+
+
+
+	.searchtab {
+		display:inline-block;
+		width:400px; 
+	}
+
+	.lineTableOverCstm {
+		background-color: #aabbcc;
+		color:#fefefe;
+		cursor:pointer;
+	}
+
+	.lineTableSelectedCstm {
+		background-color: #dadbec;
+	}
+
+	
+
+	.localActionBar {
+		margin-bottom:10px;
+	}
+
+	.tableBar {
+		/*  to keep
+		box-shadow: 0 0 10px #aabbcc;*/
+		margin-right: 20px;
+		margin-top:3px;
+		margin-left: 2px;
+	}
+
+	a {
+		color:#89a;
+	}
+
+	.tableBar a {
+		color:#fafbfc;
+	}
+
+	
+
+	.historyBlock {
+		background-color:#cccccc;
+		color:white;
+		font-weight: bold;
+	}
+
+	.umlClassBox {
+		position: relative;
+		background-color:#cccccc;
+		font-weight: bold;
+		padding:3px;
+		margin: 1px;
+		box-shadow: 0 0 5px #bbb;
+
+	}

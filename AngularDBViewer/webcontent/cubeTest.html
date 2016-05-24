@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cube test</title>
+	<script type="text/javascript" src="angular.js"></script>
+
+	<script language="javascript">
+		var app = angular.module('cubeTest', []);
+	</script>
+	<script type="text/javascript" src="cubeAppUML.js"></script>
+
+	<script language="javascript">
+	app.controller('GeomTest', ['Geom', '$scope', function(Geom, $scope){
+		
+		$scope.rm0 = Geom.get2DRotationMatix(0);
+		$scope.rm1 = Geom.get2DRotationMatix(Math.PI/2);
+
+		var p1 = {"x":0,"y":1};
+		$scope.p1r = Geom. apply2DTransformation($scope.rm1, p1);
+
+
+
+	}]);
+
+
+	</script>
+	<style type="text/css">
+	div { border:1px dashed #aabbcc; padding:10px; margin:5px;}
+
+	</style>
+</head>
+<body ng-app="cubeTest">
+
+<h1>Test </h1>
+
+<div ng-controller="GeomTest">
+<h3> Geom test</h3>
+	<div>rm O : <br/>
+	<table><tr><td>{{rm0[0][0]}}</td><td>{{rm0[0][1]}}</td></tr>
+	<tr><td>{{rm0[1][0]}}</td><td>{{rm0[1][1]}}</td></tr>
+</table>
+</div>
+
+<div>
+	rm 1 (PI/2) : <br/>
+	<table><tr><td>{{rm1[0][0]}}</td><td>{{rm1[0][1]}}</td></tr>
+	<tr><td>{{rm1[1][0]}}</td><td>{{rm1[1][1]}}</td></tr>
+
+</table>
+</div>
+	<div>P1 modified by rm1
+	<br>{{p1r.x}} , {{ p1r.y}} 
+</div>
+</div>
+
+
+</body>
+</html>
+

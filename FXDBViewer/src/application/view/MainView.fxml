@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+
+<?import application.view.components.StackPaneDriver?>
+<?import application.view.components.uml.UMLSpherePane?>
+
+<?import application.view.components.uml.UMLCubePane?>
+<?import application.view.components.uml.UMLPlanMapPane?>
+<?import application.view.components.HistoryPane?>
+<?import javafx.scene.layout.Border?>
+<?import application.view.components.uml.UMLAnnealingMapper?>
+<?import application.view.components.uml.UMLMapper?>
+
+
+
+<BorderPane prefHeight="364.0" prefWidth="410.0"
+	xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	>
+	<top>
+		<fx:include fx:id="menu" source="MenuView.fxml" />
+	</top>
+
+	<center>
+		<BorderPane fx:id="mainPane">
+			<top>
+				<ToolBar prefHeight="40.0" prefWidth="200.0"
+					BorderPane.alignment="CENTER">
+					<items>
+						<ComboBox fx:id="modelCombo" onAction="#handleComboAction"
+							prefWidth="150.0" promptText="load model" />
+						<!-- Button mnemonicParsing="false" text="Activity" /> <Button mnemonicParsing="false" 
+							onAction="#newMessage" text="New Message" / -->
+					</items>
+
+				</ToolBar>
+
+			</top>
+
+			<center>
+
+				<SplitPane dividerPositions="0.2" prefHeight="323.0"
+					prefWidth="207.0" BorderPane.alignment="CENTER">
+					<items>
+						<BorderPane>
+
+							<center>
+								<StackPane fx:id="stackPane" prefHeight="150.0"
+									prefWidth="200.0">
+									<children>
+										<ScrollPane fx:id="scroller" prefHeight="200.0"
+											prefWidth="200.0">
+
+											<content>
+												<VBox fx:id="tableBox" alignment="TOP_CENTER" spacing="5">
+
+													<padding>
+														<Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+													</padding>
+												</VBox>
+											</content>
+										</ScrollPane>
+										<UMLMapper fx:id="umlPane" />
+										<UMLCubePane fx:id="cubePane" />
+										<UMLSpherePane fx:id="spherePane" />
+										<UMLPlanMapPane fx:id="planPane" />
+										<!--  UMLAnnealingMapper fx:id="annealingPane" / -->
+									</children>
+
+								</StackPane>
+							</center>
+
+							<top>
+								<StackPaneDriver>
+									<stackPane>
+										<fx:reference source="stackPane" />
+									</stackPane>
+								</StackPaneDriver>
+							</top>
+						</BorderPane>
+
+						<BorderPane>
+
+							<center>
+								<!-- <TabPane fx:id="tabs" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="SELECTED_TAB" 
+									/> -->
+								<StackPane fx:id="tabs" />
+
+							</center>
+							<top>
+								<HistoryPane fx:id="historyPane" prefHeight="30.0"
+									spacing="15">
+									<stackPane>
+										<fx:reference source="tabs" />
+									</stackPane>
+								</HistoryPane>
+							</top>
+
+						</BorderPane>
+
+
+
+					</items>
+				</SplitPane>
+			</center>
+
+
+		</BorderPane>
+	</center>
+	<bottom>
+		<HBox prefHeight="16.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+	</bottom>
+
+
+</BorderPane>

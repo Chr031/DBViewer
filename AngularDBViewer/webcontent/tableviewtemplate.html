@@ -1,0 +1,56 @@
+
+
+<div class="actionBar"> 
+	<button class="btn btn-default" ng-click="createNewObject(historyData.tableData.classDescriptor)"> Add </button> 
+	<button class="btn btn-default" ng-click="deleteSelectedRow(historyData.tableData.dataList)"> Del </button> 
+</div> 
+ 
+
+<div ng-include="'searchtemplate.html?'+rnd()" scope="$scope"></div>
+
+<div class="table-responsive"> 
+	<table class="table" ng-show="activeClass().simpleName != undefined"> 
+ 
+		<tr>
+			<th></th>
+			<th ng-repeat="(index, property) in historyData.tableData.classDescriptor.commonPropertyDescriptors "> 
+				{{property.accessor.name}}  
+			</th>
+		<tr>
+
+		<tr ng-repeat="(index, data) in historyData.tableData.dataList | filter:searchText" >
+			<td ng-class="{ lineTableSelectedCstm:selected[index], lineTableOverCstm: hover[index]}" 
+				ng-mouseenter="hover[index] = true"
+				ng-mouseleave="hover[index] = false"
+				ng-click="selected[index] = !selected[index]"
+				><button class="btn btn-default" ng-click="editObject(data, historyData.tableData.classDescriptor)">Edit</button></td>
+
+			<td ng-repeat="(indexProperty, property) in historyData.tableData.classDescriptor.commonPropertyDescriptors" 
+
+			 	ng-class="{ lineTableSelectedCstm:selected[index], lineTableOverCstm: hover[index]}" 
+				ng-mouseenter="hover[index] = true"
+				ng-mouseleave="hover[index] = false"
+				ng-click="selected[index] = !selected[index]"
+				ng-dblclick="editObject(data, historyData.tableData.classDescriptor)"
+
+			>
+				<a ng-show="property.link && data.propertyBeans[property.accessor.name].templateType=='COLLECTION' && data.propertyBeans[property.accessor.name].value.value>0" 
+					ng-click="openTableView(property.accessor.actualTypeArgument, buildFilter(data,property.accessor.name))"> 
+					{{getSimpleClassName(property.accessor.actualTypeArgument)}} ({{data.propertyBeans[property.accessor.name].value.value}})
+				</a>
+				<a ng-show="property.link && data.propertyBeans[property.accessor.name].templateType=='BUTTON'" 
+					ng-click="openTableView(property.accessor.type,buildFilter(data,property.accessor.name))"> 
+					{{data.propertyBeans[property.accessor.name].value.value}}
+				</a>
+
+				<span ng-show="!property.link">
+				{{data.propertyBeans[property.accessor.name].value.value}}
+				</span>
+			</td>
+		</tr>
+
+
+
+	</table>
+
+</div>

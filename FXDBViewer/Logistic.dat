@@ -1,0 +1,370 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.logistic.Handling</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Storage</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.DeliveryQuality</java-class>
+    <list>
+      <application.model.pojo.logistic.DeliveryQuality>
+        <name>Very good GGG</name>
+        <value>5</value>
+        <percentage>99%</percentage>
+      </application.model.pojo.logistic.DeliveryQuality>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Capability</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Fleet</java-class>
+    <list>
+      <application.model.pojo.logistic.Fleet>
+        <size>50</size>
+      </application.model.pojo.logistic.Fleet>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.ProviderModel</java-class>
+    <list>
+      <application.model.pojo.logistic.ProviderModel>
+        <provider>
+          <id>1</id>
+          <name>Provider 1 </name>
+          <contact>
+            <phone>076 441 00 65</phone>
+            <fax>/</fax>
+            <email>c@a.com</email>
+            <address>
+              <street>Seefeldstrasse</street>
+              <zip>8008</zip>
+              <city>Zurich</city>
+              <countryCode>CH</countryCode>
+              <geoCoordinate>123,5221</geoCoordinate>
+            </address>
+          </contact>
+          <location>
+            <application.model.pojo.logistic.Address reference="../../contact/address"/>
+          </location>
+          <characteristic>
+            <application.model.pojo.logistic.DeliveryQuality reference="../../../../../../entry[3]/list/application.model.pojo.logistic.DeliveryQuality"/>
+            <application.model.pojo.logistic.Capacity>
+              <name>Storage volume</name>
+              <value>Medium</value>
+              <size>77.0</size>
+            </application.model.pojo.logistic.Capacity>
+          </characteristic>
+          <offers>
+            <application.model.pojo.logistic.SLA>
+              <contains>
+                <application.model.pojo.logistic.DeliveryQuality reference="../../../../../../../../entry[3]/list/application.model.pojo.logistic.DeliveryQuality"/>
+                <application.model.pojo.logistic.Capacity reference="../../../../characteristic/application.model.pojo.logistic.Capacity"/>
+              </contains>
+              <service>
+                <id>7</id>
+                <name>Service 1 5</name>
+                <serviceType>Delivery</serviceType>
+                <description>Local delivery</description>
+                <actualPerformance>
+                  <application.model.pojo.logistic.DeliveryQuality reference="../../../../../../../../../entry[3]/list/application.model.pojo.logistic.DeliveryQuality"/>
+                </actualPerformance>
+                <externalizes>
+                  <application.model.pojo.logistic.Transport>
+                    <name>S7</name>
+                    <value>5</value>
+                    <description>Line S7</description>
+                    <clearance>
+                      <application.model.pojo.logistic.Certificate>
+                        <name>ZVV Clearance</name>
+                        <type>C</type>
+                        <description></description>
+                      </application.model.pojo.logistic.Certificate>
+                    </clearance>
+                    <operationDistance>REGIONAL</operationDistance>
+                    <transportationMode>RAILWAY</transportationMode>
+                    <route>
+                      <application.model.pojo.logistic.Relation>
+                        <start reference="../../../../../../../../contact/address"/>
+                        <end>
+                          <street>Im Riet</street>
+                          <zip>8712</zip>
+                          <city>Stafa</city>
+                          <countryCode>CH</countryCode>
+                          <geoCoordinate>123,566</geoCoordinate>
+                        </end>
+                      </application.model.pojo.logistic.Relation>
+                    </route>
+                    <fleet reference="../../../../../../../../../../entry[5]/list/application.model.pojo.logistic.Fleet"/>
+                  </application.model.pojo.logistic.Transport>
+                </externalizes>
+              </service>
+            </application.model.pojo.logistic.SLA>
+          </offers>
+          <provides>
+            <application.model.pojo.logistic.Service reference="../../offers/application.model.pojo.logistic.SLA/service"/>
+          </provides>
+          <capability>
+            <application.model.pojo.logistic.Storage>
+              <name>Base Storage</name>
+              <value>Store</value>
+              <description></description>
+              <clearance>
+                <application.model.pojo.logistic.Certificate reference="../../../../offers/application.model.pojo.logistic.SLA/service/externalizes/application.model.pojo.logistic.Transport/clearance/application.model.pojo.logistic.Certificate"/>
+              </clearance>
+              <capacity>100</capacity>
+              <typeOfStorage>Store</typeOfStorage>
+              <location>
+                <street>Zurich HB</street>
+                <zip>8000</zip>
+                <city>Zurich</city>
+                <countryCode>CH</countryCode>
+                <geoCoordinate>123,456</geoCoordinate>
+              </location>
+            </application.model.pojo.logistic.Storage>
+            <application.model.pojo.logistic.Transport reference="../../offers/application.model.pojo.logistic.SLA/service/externalizes/application.model.pojo.logistic.Transport"/>
+          </capability>
+        </provider>
+      </application.model.pojo.logistic.ProviderModel>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Characteristic</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>Logistic</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Handling</clazz>
+            <x>429.0</x>
+            <y>319.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Storage</clazz>
+            <x>221.0</x>
+            <y>248.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.DeliveryQuality</clazz>
+            <x>485.0</x>
+            <y>17.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Capability</clazz>
+            <x>282.0</x>
+            <y>317.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.TransportationMode</clazz>
+            <x>156.0</x>
+            <y>447.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.ValueAdded</clazz>
+            <x>333.0</x>
+            <y>410.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Fleet</clazz>
+            <x>28.0</x>
+            <y>378.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Distribution</clazz>
+            <x>455.0</x>
+            <y>262.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Capacity</clazz>
+            <x>583.0</x>
+            <y>47.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.ProviderModel</clazz>
+            <x>267.0</x>
+            <y>14.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Characteristic</clazz>
+            <x>450.0</x>
+            <y>105.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Transport</clazz>
+            <x>98.0</x>
+            <y>317.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Relation</clazz>
+            <x>102.0</x>
+            <y>229.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.SLA</clazz>
+            <x>384.0</x>
+            <y>157.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Address</clazz>
+            <x>142.0</x>
+            <y>129.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.ContactInformation</clazz>
+            <x>106.0</x>
+            <y>41.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Provider</clazz>
+            <x>285.0</x>
+            <y>100.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Flexibility</clazz>
+            <x>556.0</x>
+            <y>220.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.OperationDistance</clazz>
+            <x>16.0</x>
+            <y>444.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Service</clazz>
+            <x>373.0</x>
+            <y>254.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Certificate</clazz>
+            <x>236.0</x>
+            <y>390.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Picking</clazz>
+            <x>422.0</x>
+            <y>376.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.CycleTime</clazz>
+            <x>586.0</x>
+            <y>163.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.logistic.Defect</clazz>
+            <x>611.0</x>
+            <y>101.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Relation</java-class>
+    <list>
+      <application.model.pojo.logistic.Relation reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/offers/application.model.pojo.logistic.SLA/service/externalizes/application.model.pojo.logistic.Transport/route/application.model.pojo.logistic.Relation"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.SLA</java-class>
+    <list>
+      <application.model.pojo.logistic.SLA>
+        <contains>
+          <application.model.pojo.logistic.DeliveryQuality reference="../../../../../entry[3]/list/application.model.pojo.logistic.DeliveryQuality"/>
+        </contains>
+      </application.model.pojo.logistic.SLA>
+      <application.model.pojo.logistic.SLA reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/offers/application.model.pojo.logistic.SLA"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Provider</java-class>
+    <list>
+      <application.model.pojo.logistic.Provider reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Flexibility</java-class>
+    <list>
+      <application.model.pojo.logistic.Flexibility>
+        <name>Low flexibility</name>
+        <value>Low</value>
+        <responseTime>10</responseTime>
+      </application.model.pojo.logistic.Flexibility>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.OperationDistance</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Service</java-class>
+    <list>
+      <application.model.pojo.logistic.Service reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/offers/application.model.pojo.logistic.SLA/service"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Picking</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.TransportationMode</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.ValueAdded</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Distribution</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Capacity</java-class>
+    <list>
+      <application.model.pojo.logistic.Capacity reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/characteristic/application.model.pojo.logistic.Capacity"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Transport</java-class>
+    <list>
+      <application.model.pojo.logistic.Transport reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/offers/application.model.pojo.logistic.SLA/service/externalizes/application.model.pojo.logistic.Transport"/>
+      <application.model.pojo.logistic.Transport>
+        <route/>
+        <fleet reference="../../../../entry[5]/list/application.model.pojo.logistic.Fleet"/>
+      </application.model.pojo.logistic.Transport>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Address</java-class>
+    <list>
+      <application.model.pojo.logistic.Address reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/contact/address"/>
+      <application.model.pojo.logistic.Address reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/offers/application.model.pojo.logistic.SLA/service/externalizes/application.model.pojo.logistic.Transport/route/application.model.pojo.logistic.Relation/end"/>
+      <application.model.pojo.logistic.Address reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/capability/application.model.pojo.logistic.Storage/location"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.ContactInformation</java-class>
+    <list>
+      <application.model.pojo.logistic.ContactInformation reference="../../../entry[6]/list/application.model.pojo.logistic.ProviderModel/provider/contact"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Certificate</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.CycleTime</java-class>
+    <list/>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.logistic.Defect</java-class>
+    <list/>
+  </entry>
+</map>

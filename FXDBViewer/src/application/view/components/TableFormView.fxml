@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml/1" >
+	<center>		
+		<TableView  fx:id="table" onMouseClicked="#handleEditRow" />		
+	</center>
+   <bottom>
+      <BorderPane prefHeight="30.0" prefWidth="30.0" BorderPane.alignment="CENTER">
+         <center>
+      		<HBox  alignment="CENTER" prefWidth="30.0" spacing="5" BorderPane.alignment="CENTER">
+      			<children>
+      				<Button  mnemonicParsing="false" onAction="#handlePickData" text="pick" />
+      				<Button  mnemonicParsing="false" onAction="#handleNewData" text="create" />
+      				<Button mnemonicParsing="false" onAction="#handleDeleteRow" text="remove" />
+      			</children>
+      		</HBox>
+         </center>
+         <left>
+            <Button mnemonicParsing="false" text="Refresh"  onAction="#handleRefresh" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </bottom>
+</fx:root>
+

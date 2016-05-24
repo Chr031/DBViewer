@@ -1,0 +1,130 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.menu-bar {
+	
+	
+}
+
+.line {
+	-fx-background-color: #aabbcc;
+	-fx-border-color: #ffff66;
+}
+
+.menu-item {
+	/* -fx-skin: "com.sun.javafx.scene.control.skin.MenuItemSkin";*/
+	-fx-background-color: transparent;
+	-fx-padding: 2.0 3.0 2.0 3.0 ; /* 4 5 4 5 */
+}
+
+.menu-item .left-container {
+	-fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+
+.menu-item .graphic-container {
+	-fx-padding: 0.0em 0.333em 0.0em 0.0em;
+}
+
+.menu-item .label {
+	/* -fx-padding: 0em 0.5em 0em 0em;
+	-fx-text-fill: -fx-text-base-color;
+	*/
+	-fx-text-fill: black;
+	-fx-background-color:transparent;
+
+}
+
+
+.menu-item:focused {
+	-fx-background: #a83d1b;
+	-fx-background-color: #aabbcc;
+	-fx-text-fill: black;
+}
+
+.menu-item:focused .label {
+	-fx-text-fill: white;
+	-fx-background-color:transparent;
+}
+
+.button {
+	/*#linear-gradient(white , white);*/
+	/* */
+	-fx-background-color:transparent ; 
+	-fx-text-fill:black;
+	-fx-font-weight:bold;
+	-fx-border-color: #aabbcc;
+	-fx-border-radius: 0.0 8.0 0.0 8.0;
+}
+
+.button:hover {
+	-fx-cursor: hand ;
+
+}
+
+
+.historyButton {
+	-fx-background-color:transparent ; 
+	-fx-text-fill:black;
+	-fx-font-weight:bold;
+	-fx-border-color: #aabbcc;	
+	-fx-border-radius: 0.0 16.0 16.0 0.0;
+	
+}
+
+.historyButton:hover {
+	/*-fx-background-color: #eaebec ;*/ 
+	-fx-cursor: hand ;
+}
+
+.umlButton {
+	-fx-background-color:#eaebec ; 
+}
+
+.linkLabel {
+	-fx-text-fill:black;
+	
+	
+}
+.linkLabel:hover {
+	-fx-cursor: hand ;
+	-fx-underline:true;
+}
+
+.linkLabelSelected {
+	-fx-text-fill:white;
+}
+
+.linkLabelSelected:hover {
+	-fx-cursor: hand ;
+	-fx-underline:true;
+}
+
+
+.combo-box {
+	-fx-background-color:transparent ; 
+	-fx-text-fill:black;
+	-fx-font-weight:bold;
+	-fx-border-color: #aabbcc;
+}
+
+
+.title {
+	-fx-font-weight:bold;	
+}
+
+.padded {
+	-fx-padding: 5.0 5.0 5.0 5.0;
+	
+}
+
+.text-field {
+	-fx-border-color: #aabbcc;
+	
+	
+}
+
+.cardinalityLabel {
+	-fx-font-weight:bold;
+	-fx-background-color:transparent ;
+	-fx-padding: 3.0 5.0 1.0 5.0;	
+}
+

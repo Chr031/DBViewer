@@ -1,0 +1,120 @@
+<map>
+  <entry>
+    <java-class>application.model.pojo.hotel.Ville</java-class>
+    <list>
+      <application.model.pojo.hotel.Ville>
+        <nom>Venise</nom>
+        <info></info>
+        <pays>
+          <nom>Italie</nom>
+          <info></info>
+        </pays>
+      </application.model.pojo.hotel.Ville>
+      <application.model.pojo.hotel.Ville>
+        <nom>Madrid</nom>
+        <info></info>
+        <pays>
+          <nom>Espagne</nom>
+          <info></info>
+        </pays>
+      </application.model.pojo.hotel.Ville>
+      <application.model.pojo.hotel.Ville>
+        <nom>Seville</nom>
+        <info></info>
+        <pays reference="../../application.model.pojo.hotel.Ville[2]/pays"/>
+      </application.model.pojo.hotel.Ville>
+      <application.model.pojo.hotel.Ville>
+        <nom>Paris</nom>
+        <pays>
+          <nom>France</nom>
+        </pays>
+      </application.model.pojo.hotel.Ville>
+      <application.model.pojo.hotel.Ville>
+        <nom>Berlin</nom>
+        <pays>
+          <nom>Deutschland</nom>
+        </pays>
+      </application.model.pojo.hotel.Ville>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.hotel.Pays</java-class>
+    <list>
+      <application.model.pojo.hotel.Pays reference="../../../entry/list/application.model.pojo.hotel.Ville/pays"/>
+      <application.model.pojo.hotel.Pays reference="../../../entry/list/application.model.pojo.hotel.Ville[2]/pays"/>
+      <application.model.pojo.hotel.Pays reference="../../../entry/list/application.model.pojo.hotel.Ville[4]/pays"/>
+      <application.model.pojo.hotel.Pays reference="../../../entry/list/application.model.pojo.hotel.Ville[5]/pays"/>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.hotel.Hotel</java-class>
+    <list>
+      <application.model.pojo.hotel.Hotel>
+        <nom>Meminas</nom>
+        <adresse>Porta del sol</adresse>
+        <description>...</description>
+        <ville reference="../../../../entry/list/application.model.pojo.hotel.Ville[2]"/>
+      </application.model.pojo.hotel.Hotel>
+      <application.model.pojo.hotel.Hotel>
+        <nom>San Gil</nom>
+        <adresse>Parras, 28, Vieille ville, 41002 Seville</adresse>
+        <description></description>
+        <ville reference="../../../../entry/list/application.model.pojo.hotel.Ville[3]"/>
+      </application.model.pojo.hotel.Hotel>
+      <application.model.pojo.hotel.Hotel>
+        <nom>Hotel test</nom>
+        <ville reference="../../../../entry/list/application.model.pojo.hotel.Ville[5]"/>
+      </application.model.pojo.hotel.Hotel>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.pojo.hotel.Chambre</java-class>
+    <list>
+      <application.model.pojo.hotel.Chambre>
+        <numero>455</numero>
+        <commentaire></commentaire>
+        <hotel reference="../../../../entry[3]/list/application.model.pojo.hotel.Hotel"/>
+      </application.model.pojo.hotel.Chambre>
+      <application.model.pojo.hotel.Chambre>
+        <numero>204</numero>
+        <commentaire></commentaire>
+        <hotel reference="../../../../entry[3]/list/application.model.pojo.hotel.Hotel[2]"/>
+      </application.model.pojo.hotel.Chambre>
+      <application.model.pojo.hotel.Chambre>
+        <numero>308</numero>
+        <commentaire>On the top , in front of the swimming pool</commentaire>
+        <hotel reference="../../../../entry[3]/list/application.model.pojo.hotel.Hotel[2]"/>
+      </application.model.pojo.hotel.Chambre>
+    </list>
+  </entry>
+  <entry>
+    <java-class>application.model.PositionList</java-class>
+    <list>
+      <application.model.PositionList>
+        <modelName>Hotel</modelName>
+        <list>
+          <application.model.Position>
+            <clazz>application.model.pojo.hotel.Ville</clazz>
+            <x>33.0</x>
+            <y>186.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.hotel.Pays</clazz>
+            <x>33.0</x>
+            <y>257.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.hotel.Hotel</clazz>
+            <x>30.0</x>
+            <y>102.0</y>
+          </application.model.Position>
+          <application.model.Position>
+            <clazz>application.model.pojo.hotel.Chambre</clazz>
+            <x>20.0</x>
+            <y>20.0</y>
+          </application.model.Position>
+        </list>
+      </application.model.PositionList>
+    </list>
+  </entry>
+</map>

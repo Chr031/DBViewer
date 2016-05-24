@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Software Architecture</title>
+<style type="text/css">
+div {
+	background-color: blue;
+	font-weight: bold;
+	color: White;
+	margin: 5px;
+	padding: 2px;
+	text-align: center;
+}
+
+.cell {
+	display: table-cell;
+	background-color: #edeeff;
+	color: black;
+}
+
+td {
+	background-color: blue;
+	font-weight: bold;
+	color: White;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+	<div class="cell">
+
+		General Architecture Target.
+
+		<div>Database</div>
+		<div>Database Access</div>
+		<div class="cell">
+			<div>Data Object Access</div>
+			<div>Data Controller</div>
+		</div>
+		<div class="cell">
+			<div>Generic Table/Object Descriptor</div>
+			<div>Model Reader</div>
+			<div>Layout Generator</div>
+		</div>
+		<div>JavaFX UI</div>
+	
+	
+	</div>
+
+<hr color="blue">
+	
+	<div class="cell">
+	
+		Architecture for RIA
+		
+		<div class="cell">
+		DB 
+		</div>
+		<div class="cell" style="{width:100%}">
+			<div > Database </div>
+		</div>
+		<br>
+		<div class="cell"> Server</div>
+		<div class="cell"> 
+			<div>Database Access</div>
+			<div class="cell"> 
+				<div>Data Object Access</div>
+				<div>Data Controller</div>
+			</div>
+			<div class="cell">
+				<div>Generic Table/Object Descriptor</div>
+				<div>Model Reader</div>
+			</div>
+		</div>
+		<br>
+		<div class="cell"> Browser</div>
+		<div class="cell">
+			<div>Layout Generator (AngularJS)</div>
+			<div>Web UI (AngularJS)</div>
+		</div>
+		
+		
+		
+	</div>
+	
+	<hr color="blue"/>
+	
+	<table bgcolor="white" >
+	
+	<tr>
+		<td class="cell">DB Server</td>
+		<td colspan="2"> Database </td>
+	</tr>
+	<tr/>
+	<tr>
+		<td class="cell" rowspan="4">Web Server</td>
+		<td colspan="2"> Database Access </td>
+	</tr>
+	<tr><td>Data Object Access</td><td>Generic Table/Object Descriptor</td></tr>
+	<tr><td>Data controller </td> <td>Model Reader</td></tr>
+	<tr><td colspan="2">Web services layer</td></tr>
+	<tr/>
+	<tr><td class="cell" rowspan="2">Browser</td> <td colspan="2">Layout Generator (AngularJS)</td></tr>
+	<tr><td colspan="2">Web UI (AngularJS)</td></tr>
+	</table>
+		
+		
+</body>
+</html>

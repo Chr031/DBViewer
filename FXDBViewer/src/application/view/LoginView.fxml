@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.control.Tooltip?>
+
+<BorderPane prefHeight="203.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoginViewController">
+
+
+	<left>
+		<PointLight fx:id="pointLight" color="#aabbcc" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER" />
+	</left>
+
+	<center>
+		<Box fx:id="cube" cullFace="FRONT" depth="40.0" height="40.0" rotate="-58.0" width="40.0" BorderPane.alignment="CENTER">
+			<rotationAxis>
+				<Point3D x="1.0" y="1.0" z="1.0" />
+			</rotationAxis>
+
+		</Box>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+			<children>
+				<TextField fx:id="login" prefHeight="16.0" prefWidth="149.0" promptText="Enter your login">
+					<tooltip>
+						<Tooltip text="Enter your login" />
+					</tooltip>
+				</TextField>
+				<PasswordField fx:id="password" prefHeight="16.0" prefWidth="149.0">
+					<tooltip>
+						<Tooltip text="Enter your password" />
+					</tooltip>
+				</PasswordField>
+
+
+				<Button mnemonicParsing="false" onAction="#handleLoginProcess" onKeyPressed="#handleLoginProcess" text="Enter" />
+
+			</children>
+		</HBox>
+	</bottom>
+   
+
+</BorderPane>

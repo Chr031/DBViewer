@@ -1,0 +1,37 @@
+
+
+<div class="actionBar"> 
+	<button class="btn btn-default" ng-click="pickObject(historyData,historyData.tableData.dataList[pickedIndex]);"> Select </button>
+	<button class="btn btn-default" ng-click="previousHistory();"> Cancel </button> 
+</div>
+
+<div ng-include="'searchtemplate.html?'+rnd()" ></div>
+
+<div class="table-responsive"> 
+	  <table class="table" ng-show="activeClass().simpleName != undefined"> 
+ 
+	<tr>
+		<th ng-repeat="(index, property) in historyData.tableData.classDescriptor.commonPropertyDescriptors"> 
+		{{property.accessor.name}}  
+		</th>
+	<tr>
+
+	<tr ng-repeat="(index, data) in historyData.tableData.dataList | filter:searchText" >
+		<td ng-repeat="(indexProperty, property) in historyData.tableData.classDescriptor.commonPropertyDescriptors" 
+
+		 	ng-class="{ lineTableOverCstm: hover[index] }" 
+			ng-mouseenter="hover[index] = true"
+			ng-mouseleave="hover[index] = false"
+			
+			ng-dblclick="pickObject(historyData, data)"
+
+		>
+			{{data.propertyBeans[property.accessor.name].value.value}}
+		</td>
+	</tr>
+
+
+
+</table>
+
+</div>

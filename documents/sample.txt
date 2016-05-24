@@ -1,0 +1,11 @@
+@me
+@test
+
+#projectX.specification
+
+-name: this is a test specification
+-description: 
+All what should be there is a global file for this project and will describe the main topics of the project and 
+as the main use cases it should solve.
+
+-file attached:&file
