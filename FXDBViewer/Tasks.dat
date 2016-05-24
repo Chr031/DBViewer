@@ -24,49 +24,6 @@
         <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
         <subTasks>
           <application.model.pojo.tasks.Task>
-            <id>1007</id>
-            <name>JavaFX Test</name>
-            <description>Make some integration tests</description>
-            <done>false</done>
-            <expectedDate>2015-06-17 22:00:00.0 UTC</expectedDate>
-            <subTasks/>
-            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
-          </application.model.pojo.tasks.Task>
-          <application.model.pojo.tasks.Task>
-            <id>123</id>
-            <name>JavaFX Reverse Field Implementation</name>
-            <description>Implementation of an accessor and simulated fields that displays the reverse data of a link.</description>
-            <done>true</done>
-            <expectedDate>2015-06-08 22:00:00.0 UTC</expectedDate>
-            <subTasks/>
-            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
-          </application.model.pojo.tasks.Task>
-          <application.model.pojo.tasks.Task>
-            <id>1003</id>
-            <name>JavaFX autocalculate</name>
-            <description>Enable a refresh of an autocalculated field.
-
-Quite proud of it ... 
-
-2 hours of dev ... no basic bugs !</description>
-            <done>true</done>
-            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
-            <subTasks/>
-            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
-          </application.model.pojo.tasks.Task>
-          <application.model.pojo.tasks.Task>
-            <id>1008</id>
-            <name>JavaFX Accessors</name>
-            <description>- Take into account getter and setters
-- Take into account linked fields</description>
-            <done>false</done>
-            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
-            <subTasks>
-              <application.model.pojo.tasks.Task reference="../../../application.model.pojo.tasks.Task[2]"/>
-            </subTasks>
-            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
-          </application.model.pojo.tasks.Task>
-          <application.model.pojo.tasks.Task>
             <id>1012</id>
             <name>JavaFX add a tree view</name>
             <description>Instead of the default table view, a tree table view could be possible and should increase the readability of data.
@@ -86,26 +43,49 @@ In case of a self reference (like with task and sub tasks) this should be the de
             <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
           </application.model.pojo.tasks.Task>
           <application.model.pojo.tasks.Task>
-            <id>1010</id>
-            <name>JavaFX add driver buttons on list </name>
-            <description>When a link is identified, a list should propose a way to edit the linked object list. 
-
-This may be very optimal for a good navigation....</description>
-            <done>false</done>
-            <expectedDate>2015-06-25 22:00:00.0 UTC</expectedDate>
+            <id>1002</id>
+            <name>JavaFX HistoryPane</name>
+            <description>Create a component to do an history pane for the navigation and to avoid the popup definition.</description>
+            <done>true</done>
+            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
             <subTasks/>
+            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
+          </application.model.pojo.tasks.Task>
+          <application.model.pojo.tasks.Task>
+            <id>123</id>
+            <name>JavaFX Reverse Field Implementation</name>
+            <description>Implementation of an accessor and simulated fields that displays the reverse data of a link.</description>
+            <done>true</done>
+            <expectedDate>2015-06-08 22:00:00.0 UTC</expectedDate>
+            <subTasks/>
+            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
+          </application.model.pojo.tasks.Task>
+          <application.model.pojo.tasks.Task>
+            <id>1003</id>
+            <name>JavaFX autocalculate</name>
+            <description>Enables a refresh of an autocalculated field.
+
+Quite proud of it ... 
+
+2 hours of dev ... no basic bugs !</description>
+            <done>true</done>
+            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
+            <subTasks/>
+            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
+          </application.model.pojo.tasks.Task>
+          <application.model.pojo.tasks.Task>
+            <id>1008</id>
+            <name>JavaFX Accessors</name>
+            <description>- Take into account getter and setters
+- Take into account linked fields</description>
+            <done>false</done>
+            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
+            <subTasks>
+              <application.model.pojo.tasks.Task reference="../../../application.model.pojo.tasks.Task[4]"/>
+            </subTasks>
             <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
           </application.model.pojo.tasks.Task>
           <application.model.pojo.tasks.Task reference="../../../application.model.pojo.tasks.Task"/>
-          <application.model.pojo.tasks.Task>
-            <id>1011</id>
-            <name>JavaFX work on Date presenters</name>
-            <description>Update and rework the date presenters in order to support Date and Calendar, custom date format and also time format if necessary.</description>
-            <done>false</done>
-            <expectedDate>2015-06-25 22:00:00.0 UTC</expectedDate>
-            <subTasks/>
-            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
-          </application.model.pojo.tasks.Task>
           <application.model.pojo.tasks.Task>
             <id>1009</id>
             <name>JavaFX filters</name>
@@ -126,11 +106,11 @@ This may be very optimal for a good navigation....</description>
             <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
           </application.model.pojo.tasks.Task>
           <application.model.pojo.tasks.Task>
-            <id>1002</id>
-            <name>JavaFX HistoryPane</name>
-            <description>Create a component to do an history pane for the navigation and to avoid the popup definition.</description>
-            <done>true</done>
-            <expectedDate>2015-05-21 22:00:00.0 UTC</expectedDate>
+            <id>1011</id>
+            <name>JavaFX work on Date presenters</name>
+            <description>Update and rework the date presenters in order to support Date and Calendar, custom date format and also time format if necessary.</description>
+            <done>false</done>
+            <expectedDate>2015-06-25 22:00:00.0 UTC</expectedDate>
             <subTasks/>
             <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
           </application.model.pojo.tasks.Task>
@@ -147,17 +127,37 @@ CAN done, and textarea too...</description>
             <subTasks/>
             <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
           </application.model.pojo.tasks.Task>
+          <application.model.pojo.tasks.Task>
+            <id>1010</id>
+            <name>JavaFX add driver buttons on list </name>
+            <description>When a link is identified, a list should propose a way to edit the linked object list. 
+
+This may be very optimal for a good navigation....</description>
+            <done>false</done>
+            <expectedDate>2015-06-25 22:00:00.0 UTC</expectedDate>
+            <subTasks/>
+            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
+          </application.model.pojo.tasks.Task>
+          <application.model.pojo.tasks.Task>
+            <id>1007</id>
+            <name>JavaFX Test</name>
+            <description>Make some integration tests</description>
+            <done>false</done>
+            <expectedDate>2015-06-17 22:00:00.0 UTC</expectedDate>
+            <subTasks/>
+            <assignee reference="../../../../application.model.pojo.tasks.Task/assignee"/>
+          </application.model.pojo.tasks.Task>
         </subTasks>
         <assignee reference="../../application.model.pojo.tasks.Task/assignee"/>
       </application.model.pojo.tasks.Task>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[5]"/>
       <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[3]"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[11]"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[10]"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[2]"/>
       <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[12]"/>
       <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[6]"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[4]"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[10]"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[10]/subTasks/application.model.pojo.tasks.Task"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[8]"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[8]/subTasks/application.model.pojo.tasks.Task"/>
       <application.model.pojo.tasks.Task>
         <id>1011</id>
         <name>JavaFX Tableview not refreshed</name>
@@ -168,14 +168,14 @@ CAN done, and textarea too...</description>
         <subTasks/>
         <assignee reference="../../application.model.pojo.tasks.Task/assignee"/>
       </application.model.pojo.tasks.Task>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[7]"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[11]"/>
       <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[9]"/>
-      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task[5]"/>
+      <application.model.pojo.tasks.Task reference="../application.model.pojo.tasks.Task[2]/subTasks/application.model.pojo.tasks.Task"/>
       <application.model.pojo.tasks.Task>
         <id>1</id>
         <name>AngularJS tasks</name>
         <description>Creation of the app</description>
-        <done>false</done>
+        <done>true</done>
         <expectedDate>2015-06-25 22:00:00.0 UTC</expectedDate>
         <subTasks/>
         <assignee>
@@ -185,6 +185,14 @@ CAN done, and textarea too...</description>
           <birthday>2015-04-26 22:00:00.0 UTC</birthday>
         </assignee>
       </application.model.pojo.tasks.Task>
+    </list>
+  </entry>
+  <entry>
+    <java-class>java.util.ArrayList</java-class>
+    <list>
+      <list>
+        <application.model.pojo.tasks.User reference="../../../../entry/list/application.model.pojo.tasks.Task/assignee"/>
+      </list>
     </list>
   </entry>
   <entry>
@@ -218,14 +226,6 @@ CAN done, and textarea too...</description>
           </application.model.Position>
         </list>
       </application.model.PositionList>
-    </list>
-  </entry>
-  <entry>
-    <java-class>java.util.ArrayList</java-class>
-    <list>
-      <list>
-        <application.model.pojo.tasks.User reference="../../../../entry/list/application.model.pojo.tasks.Task/assignee"/>
-      </list>
     </list>
   </entry>
 </map>

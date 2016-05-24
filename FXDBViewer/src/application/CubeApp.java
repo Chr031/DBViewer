@@ -2,18 +2,17 @@ package application;
 
 import java.io.IOException;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import application.model.ModelService;
 import application.service.ActionService;
 import application.view.LoadModelController;
 import application.view.LoginViewController;
 import application.view.MainViewController;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class CubeApp extends Application {
 
