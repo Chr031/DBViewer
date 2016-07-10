@@ -1,6 +1,5 @@
-# README #
 
-DBViewer repository
+## DBViewer repository
 
 This project is an attempt to provide a direct view mapping of the structures and the data of a database.
 
